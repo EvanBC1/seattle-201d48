@@ -32,10 +32,27 @@ var sara = {
 
 var allStudents = [];
 
-function Student() {}
+function Student(firstName, lastName, preferredName, homeTown) {
+  this.course = '201d48';
+  this.enrolled = true;
+  this.instructors = ['Sam', 'Lena'];
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.preferredName = preferredName;
+  this.homeTown = homeTown;
+  this.codeNinja = true;
+  this.introduction = function () {
+    return 'Hi, my name is ' + this.firstName + ' ' + this.lastName + ', but you can call me ' + this.preferredName + '. I am from ' + this.homeTown + '.';
+  };
+  allStudents.push(this);
+}
 
-// Constructor = 12
-// Each instance = 1 * 11
+new Student('Sara', 'Haynes', 'Sara without an H', 'Tuscon');
+new Student('Lillian', 'Gales', 'Lillian' , 'canada');
+new Student('Paula', 'Cruz', 'paula', 'china');
+
+// Constructor = 13
+// Each instance = 1 * 10
 // Total lines to model the entire class: 23
 
 //==========================
